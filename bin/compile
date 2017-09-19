@@ -19,9 +19,9 @@ function set-default-env (){
 }
 
 echo "-----> Fetching and vendoring cmake"
-curl 'https://cmake.org/files/v3.4/cmake-3.4.3.tar.gz' -s -o - | tar -xz -C "$VENDOR_DIR"
+curl 'https://cmake.org/files/v3.9/cmake-3.9.2.tar.gz' -s -o - | tar -xz -C "$VENDOR_DIR"
 
-mv "$VENDOR_DIR/cmake-3.4.3" "$VENDOR_DIR/cmake"
+mv "$VENDOR_DIR/cmake-3.9.2" "$VENDOR_DIR/cmake"
 cd "$VENDOR_DIR/cmake"
 ./configure --prefix=$VENDOR_DIR
 make
